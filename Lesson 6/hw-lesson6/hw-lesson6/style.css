@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Sen&display=swap');
+
+*,
+.header {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sen', sans-serif;
+}
+
+.navigation {
+    /* margin: 0;
+    padding: 0;
+    width: 1350px;
+    height: 80px; */
+    background-color: #232536;
+}
+
+.nav {
+    left: -50px;
+}
+
+.menu {
+    justify-content: flex-end;
+}
+
+.nav-item {
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    width: 140px;
+    height: 28.35px;
+    left: 83px;
+    top: 20px;
+    color: white;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 48px;
+    gap: 12px;
+
+    width: 179px;
+    height: 56px;
+    left: 370px;
+    top: 12px;
+    background: #FFFFFF;
+}
+
+.knopka1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.posted-bg {
+    margin-right: 0;
+    height: 721px;
+    background-image: url(man.jpg);
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: multiply;
+}
+
+.text1 {
+    position: absolute;
+    top: 208px;
+    left: 80px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.text2 {
+    position: absolute;
+    width: 803px;
+    height: 128px;
+    right: 470px;
+    top: 252px;
+
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 64px;
+
+    letter-spacing: -2px;
+
+    color: #FFFFFF;
+}
+
+.colortext {
+    color: #FFD050;
+}
+
+.text3 {
+    position: absolute;
+    top: 404px;
+    left: 80px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+}
+
+.text4 {
+    position: absolute;
+    width: 599px;
+    height: 56px;
+    right: 670px;
+    top: 448px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+}
+
+.knopka2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 48px;
+    gap: 12px;
+
+    position: absolute;
+    width: 204px;
+    height: 56px;
+    left: 90px;
+    top: 552px;
+
+    background: #FFD050;
+
+    border: 0;
+
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+
+    color: #232536;
+}

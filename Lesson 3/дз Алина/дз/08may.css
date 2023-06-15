@@ -1,0 +1,131 @@
+*,div, div p, h1,h2,h3{
+    font-family: sans-serif;
+}
+
+*
+{background-color: #c417ad;
+color:lightslategray;
+font-weight: bold;}
+div{
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    background-color: goldenrod;
+    border: 1px solid black;
+}
+div:first-of-type{
+    background-color: lightpink;
+}
+
+div p{
+    color:red;
+}
+div p+span{
+    color: yellow;
+}
+.square{
+    width: 200px;
+    height: 200px;
+}
+div.square.wrapper{
+    width: 300px;
+    height: 300px;
+}
+#square2 #square2Text{
+    color: wheat;
+}
+div:last-of-type{
+    width: auto;
+    height: 200px;
+    background-image: url(f1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.text{
+    font-size: 2em;
+
+}
+.child{
+    font-size: 3em;
+}
+.text2{
+    font-size: 2em;
+}
+div:last-of-type{
+    width: 50vw;
+    height: 50vh;
+}
+.link{
+text-decoration: none;
+}
+.link:hover{
+background-color: blue;
+transition-duration: 1.5s;
+}
+.link1:visited{
+    color: crimson;
+}
+.link1::before{
+    content:"содержимое";
+}
+.photo{
+    list-style: none;
+    margin: 0 0 3px;
+    padding: 5px 0 3px;
+    text-align: center;
+    background: black;
+}
+.photo li{
+    display: inline-block;
+}
+.photo li:after{
+    color:bisque;
+    display: inline-block;
+    vertical-align: top;
+}
+.photo li:last-child:after{
+    content: none;
+}
+.photo a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 100px 0 100px;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: color.2s;
+}
+.photo a,.photo a:visited{
+    color:antiquewhite;
+}
+.photo a.current, .photo a:hover{
+    color:indianred;
+}
+.photo a:before, .photo a:after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: #feb386;
+    transition: .8s;
+}
+.photo a:hover:before, .photo .current:before{
+    left: 0;
+}
+.photo a:hover:after, .photo .current:after{
+    right: 0;
+}
+@media(max-width:550px){
+.photo{padding-top: 0;}
+.photo li{display: block;}
+.photo li:after{content: none;}
+.photo a{
+    padding: 25px 0 20px;
+    margin: 0 30px;
+}
+}

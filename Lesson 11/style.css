@@ -1,0 +1,49 @@
+:root{
+    --font-size:64px;   
+}
+
+.block + .block {
+    background-color: lightgreen;
+}
+div + div {
+    background-color: lightcyan;
+}
+
+.header:hover{
+    transform: rotate(90deg);
+}
+.block{
+    color: crimson;
+}
+
+p[class="text"]{
+    color: aqua;
+    font-size: var(--font-size);
+}
+[type]{
+    color: pink;
+    
+}
+.image{
+    background-color: black;
+    transform:translate(100px, 100px);
+}
+[class]{
+    color: pink;
+}
+input:focus{
+    color: black;
+    background-color: green;
+}
+input:hover{
+    border-color: chartreuse;
+}
+a{
+    color: black;
+}
+a:visited{
+    color: red;
+}
+a:hover{
+    transform: rotate(180deg);
+}

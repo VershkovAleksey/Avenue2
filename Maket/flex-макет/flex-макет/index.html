@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <title>HomeWork-Alina</title>
+</head>
+
+<body>
+    <header class="header  navigation">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <svg width="140" height="29" viewBox="0 0 140 29" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" class="logo">
+                        <path
+                            d="M139.752 21.6557V25.1203H136.846C133.745 25.0228 132.088 23.3481 132.088 20.2026V12.2899H130.059V9.25068H132.088V5.84814H136.376V9.21523H139.655V12.2456H136.376V19.7773C136.376 20.7962 136.58 21.6114 138.148 21.6114L139.752 21.6557Z" />
+                        <path
+                            d="M112.965 17.2166V16.9862C112.919 15.9671 113.074 14.9488 113.422 13.9898C113.77 13.0308 114.303 12.1498 114.992 11.3975C115.681 10.6451 116.512 10.0361 117.437 9.6054C118.362 9.17468 119.362 8.9307 120.382 8.88745C120.585 8.88745 120.798 8.88745 121.002 8.88745C125.051 8.88745 128.604 11.2444 128.604 16.8621V18.0583H117.351C117.466 20.6457 118.866 22.1077 121.223 22.1077C123.252 22.1077 124.2 21.2216 124.475 19.928H128.525C128.028 23.3039 125.335 25.1824 121.073 25.1824C116.394 25.1469 112.965 22.1875 112.965 17.2166ZM124.387 15.3469C124.236 12.99 123.049 11.8558 120.984 11.8558C118.919 11.8558 117.732 13.1318 117.44 15.3469H124.387Z" />
+                        <path
+                            d="M95.4573 17.2166V16.9862C95.4108 15.9685 95.5654 14.9516 95.9122 13.9937C96.259 13.0358 96.7912 12.1557 97.4783 11.4035C98.1654 10.6514 98.994 10.042 99.9168 9.61032C100.839 9.1786 101.838 8.93296 102.856 8.88745C103.06 8.88745 103.272 8.88745 103.476 8.88745C107.526 8.88745 111.088 11.2444 111.088 16.8621V18.0583H99.8433C99.9585 20.6457 101.359 22.1077 103.716 22.1077C105.745 22.1077 106.693 21.2216 106.967 19.928H111.017C110.512 23.3039 107.818 25.1824 103.556 25.1824C98.8864 25.1469 95.4573 22.1875 95.4573 17.2166ZM106.879 15.3469C106.728 12.99 105.541 11.8558 103.476 11.8558C101.412 11.8558 100.26 13.1672 99.932 15.3381L106.879 15.3469Z" />
+                        <path
+                            d="M70.8867 9.21509H75.4234L78.1968 19.7239L81.2361 9.21509H84.7804L87.5272 19.7239L90.4513 9.21509H94.607L89.6804 24.8277H85.4272L82.769 15.0277L79.9247 24.8277H75.6184L70.8867 9.21509Z" />
+                        <path
+                            d="M56.4688 19.9189H60.5181C60.7042 21.3278 61.4042 22.1341 63.265 22.1341C64.9308 22.1341 65.7017 21.505 65.7017 20.4328C65.7017 19.3607 64.8156 18.9088 62.5472 18.5898C58.3915 17.9607 56.7877 16.7645 56.7877 13.7164C56.7877 10.4645 59.765 8.85181 62.9903 8.85181C66.4548 8.85181 69.0688 10.11 69.4409 13.6986H65.4447C65.4192 13.4212 65.339 13.1516 65.2087 12.9053C65.0784 12.6591 64.9006 12.4411 64.6855 12.264C64.4705 12.0868 64.2225 11.9541 63.9559 11.8733C63.6892 11.7926 63.4092 11.7655 63.132 11.7936H62.9991C61.5991 11.7936 60.7839 12.4493 60.7839 13.4062C60.7839 14.3632 61.5371 14.7797 63.8232 15.1075C67.7042 15.6923 69.8751 16.6759 69.8751 20.0164C69.8751 23.3569 67.4206 25.1467 63.3093 25.1467C59.1979 25.1467 56.5839 23.2948 56.4688 19.9189Z" />
+                        <path
+                            d="M39.2617 9.21514H43.5503V11.6873C44.0337 10.7799 44.7674 10.0304 45.6643 9.52772C46.5612 9.02509 47.5835 8.79051 48.6098 8.85185C51.6491 8.85185 53.8554 10.7038 53.8554 14.9303V24.8632H49.6199V15.5506C49.6199 13.4329 48.7959 12.4227 46.882 12.4227C46.4774 12.3875 46.0699 12.4325 45.6829 12.5552C45.2958 12.6779 44.9368 12.8758 44.6264 13.1376C44.316 13.3995 44.0604 13.72 43.8742 14.0809C43.688 14.4417 43.5749 14.8358 43.5415 15.2405C43.5193 15.4288 43.5193 15.6192 43.5415 15.8076V24.8278H39.2617V9.21514Z" />
+                        <path
+                            d="M30.9858 5.28988C30.9703 4.86229 31.0819 4.4397 31.3067 4.07562C31.5315 3.71153 31.8592 3.42233 32.2484 3.24462C32.6377 3.06691 33.0709 3.00868 33.4932 3.07731C33.9155 3.14594 34.308 3.33834 34.6209 3.63016C34.9338 3.92197 35.1531 4.30007 35.2511 4.71659C35.349 5.13311 35.3211 5.56932 35.171 5.96998C35.0208 6.37065 34.7552 6.71776 34.4076 6.96737C34.0601 7.21697 33.6463 7.35785 33.2187 7.37216H33.139C32.8736 7.38896 32.6074 7.35319 32.3559 7.2669C32.1043 7.18062 31.8723 7.04551 31.673 6.86934C31.4738 6.69317 31.3113 6.4794 31.1949 6.24028C31.0785 6.00117 31.0105 5.74143 30.9947 5.47596C30.9873 5.41422 30.9843 5.35204 30.9858 5.28988ZM30.9858 9.2152H35.3187V24.8279H31.0035L30.9858 9.2152Z" />
+                        <path
+                            d="M14.8184 3.49121H28.5171V7.27476H19.6563V12.9191H26.6741V16.5608H19.6475V24.8279H14.8184V3.49121Z" />
+                        <path
+                            d="M6.38861 10.4734C6.38861 11.8114 6.38861 13.4418 4.54557 14.1063C6.43291 14.7532 6.38861 16.1266 6.38861 17.562V22.8785C6.38861 23.8886 6.7962 24.5 7.52279 24.6506C7.68244 24.7045 7.85064 24.7285 8.01899 24.7215H9.79114V28.2658H6.86709C3.7481 28.2658 2.02911 26.4937 2.02911 23.2063V16.9152C2.00699 16.5922 1.86458 16.2893 1.63 16.0662C1.39541 15.8431 1.08571 15.716 0.762025 15.7101H0V12.6H0.762025C1.09216 12.5956 1.40796 12.4644 1.64388 12.2334C1.87981 12.0024 2.01776 11.6895 2.02911 11.3595V4.97975C2.02911 1.74557 3.71266 0 6.86709 0H9.81772V3.49114H8.04557C7.87702 3.49163 7.70958 3.51854 7.54937 3.57089C6.82278 3.75696 6.41519 4.35949 6.41519 5.34304L6.38861 10.4734Z" />
+                    </svg>
+                </a>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Переключатель навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+                    <div class="navbar nav">
+                        <a class="nav-item nav-link" href="#">Home</a>
+                        <a class="nav-item nav-link" href="#">Blog</a>
+                        <a class="nav-item nav-link" href="#">About Us</a>
+                        <a class="nav-item nav-link" href="#">Contact Us</a>
+                        <button class="knopka1">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container posted">
+            <div class="row g-0">
+                <div class="col-8 posted-startup">
+                    <p class="text1">Posted on <b>startup</b></p>
+                    <p class="text2">Step-by-step guide to choosing great font pairs</p>
+                    <p class="text3">By <a class="colortext1" href="#">James West </a>| May 23, 2022 </p>
+                    <p class="text4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                    <button class="knopka2">Read More ></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container featured">
+            <div class="row featured-bg g-0">
+                <div class="col-7"><a href="#" class="text5">Featured Post</a></div>
+                <div class="col-4"> <a href="#" class="text6">All Posts</a></div>
+                <div class="col-1"><a href="#" class="text7">View All</a></div>
+
+            </div>
+
+            <div class="row lorem-bg g-0">
+                <div class="col-7 block1">
+                    <!-- <div class="featured-bg"><a href="#" class="text5">Featured Post</a></div> -->
+                    <img src="style/img/white.jpg" class="image">
+                    <div class="block1__item__text8">By <a href="#" class="colortext2">John Doe </a>l May 23, 2022</div>
+                    <div class="block1__item__text9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor.
+                    </div>
+                    <div class="block1__item__text10">
+                        <p class="text10">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                    </div>
+                    <div class="block1__item__knopka3"><button class="knopka3">Read More ></button></div>
+                </div>
+                <div class="col-4 block2">
+                    <!-- <div class="featured-bg"><a href="#" class="text6">All Posts</a></div> -->
+                    <div class="block2-1">
+                        <p class="text11">By <a href="#" class="colortext2">John Deo</a> l Aug 23, 2021</p>
+                        <p class="text12">8 Figma design systems that you can download for free today.</p>
+                    </div>
+                    <div class="block2-1">
+                        <p class="text11">By <a href="#" class="colortext2">John Deo</a> l Aug 23, 2021</p>
+                        <p class="text12">8 Figma design systems that you can download for free today.</p>
+                    </div>
+                    <div class="block2-1">
+                        <p class="text11"> By <a href="#" class="colortext2">John Deo</a> l Aug 23, 2021 </p>
+                        <p class="text12">8 Figma design systems that you can download for free today.</p>
+                    </div>
+                    <div class="block2-1">
+                        <p class="text11">By <a href="#" class="colortext2">John Deo</a> l Aug 23, 2021</p>
+                        <p class="text12">8 Figma design systems that you can download for free today.</p>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+
+        <div class="container information">
+            <div class="row block3_line g-0">
+                <!-- <div class="col-2"></div>  -->
+                <div class="col-7 block3-1"></div>
+                <div class="col-3 block3-2"></div>
+            </div>
+            <div class="row block3_inquiry g-0">
+                <!-- <div class="col-1"></div>
+                <div class="col-1"></div> -->
+                <div class="col-6 block3-3">
+                    <p class="text13">ABOUT US</p>
+                    <p class="text14">We are a community of content writers who share their learnings</p>
+                    <p class="text15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="knopka4">Read More ></button>
+                </div>
+                <div class="col-6 block3-4">
+                    <p class="text13">OUR MISION</p>
+                    <p class="text14-1">Creating valuable content for creatives all around the world</p>
+                    <p class="text15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <!-- <div class="col-1"></div> -->
+            </div>
+        </div>
+
+        <div class="container chapter">
+            <div class="row g-0">
+                <div class="col-12 choose">Choose A Catagory</div>
+            </div>
+
+            <div class="row catagory g-0">
+                <div class="col-3">
+                    <div class="block4">
+                        <img src="style/img/Icon1.png" class="icon">
+                        <p class="text16">Business</p>
+                        <p class="text17">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="block4">
+                        <img src="style/img/Icon2.png" class="icon">
+                        <p class="text16">Startup</p>
+                        <p class="text17">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="block4">
+                        <img src="style/img/Icon3.png" class="icon">
+                        <p class="text16">Economy</p>
+                        <p class="text17">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="block4">
+                        <img src="style/img/Icon4.png" class="icon">
+                        <p class="text16">Techology</p>
+                        <p class="text17">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container started">
+            <div class="row block5 g-0">
+                <div class="col-4">
+                    <img src="style/img/people.png" class="people">
+                </div>
+                <div class="col-8 block5-2">
+                    <div class="started-1">Why we started </div>
+                    <div class="started-2">It started out as a simple idea and evolved into our passion</div>
+                    <div class="started-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip.</div>
+                    <button class="knopka5">Discover our story > </button>
+                </div>
+            </div>
+        </div>
+        <div class="container creator">
+            <div class="row g-0">
+                <div class="col-12 authors">List of Authors</div>
+                <div class="col-3">
+                    <div class="block6">
+                        <img src="style/img/floyde.png" class="author">
+                        <p class="text18">Floyd Miles</p>
+                        <p class="text19">Content Writer @Company</p>
+                        <div class="massang">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="block6">
+                        <img src="style/img/dianne.png" class="author">
+                        <p class="text18">Dianne Russell</p>
+                        <p class="text19">Content Writer @Company</p>
+                        <div class="massang">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="block6">
+                        <img src="style/img/jenny.png" class="author">
+                        <p class="text18">Jenny Wilson</p>
+                        <p class="text19">Content Writer @Company</p>
+                        <div class="massang">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="block6">
+                        <img src="style/img/leslie.png" class="author">
+                        <p class="text18">Leslie Alexander</p>
+                        <p class="text19">Content Writer @Company</p>
+                        <div class="massang">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="photo" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container emblem">
+            <div class="row">
+                <div class="col-3 emblem1">
+                    <div class="emblem-1">We are</div>
+                    <div class="emblem-2">Featured in</div>
+                </div>
+                <div class="col-9 emblem2">
+                    <img src="style/img/Logo 1.png" class="emblem-3">
+                    <img src="style/img/Logo 2.png" class="emblem-3">
+                    <img src="style/img/Logo 3.png" class="emblem-3">
+                    <img src="style/img/Logo 4.png" class="emblem-3">
+                    <img src="style/img/Logo 5.png" class="emblem-3">
+                </div>
+            </div>
+        </div>
+        <div class="container slider">
+            <div class="row karusel g-0">
+                <div class="col-5 testimonials">
+                    <div class="text20">TESTIMONIALs</div>
+                    <div class="text21">What people say about our blog</div>
+                    <div class="text22">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    </div>
+                </div>
+                <div class="vr"></div>
+                <div class="col-6 karus">
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+
+                                <div class="text23">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</div>
+                                <div class="scroller">
+                                    <img src="style/img/Profile picture.png" class="jonathan">
+                                    <div class="scroller__author">
+                                        <p class="text24">Jonathan Vallem</p>
+                                        <p class="text25">New york, USA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+
+                                <div class="text23">Everyday practice shows that the basic vector of development creates
+                                    prerequisites for further directions of development. </div>
+                                <div class="scroller">
+                                    <img src="style/img/jenny.png" class="jonathan">
+                                    <div class="scroller__author">
+                                        <p class="text24">Jenny Wilson</p>
+                                        <p class="text25">Los Angeles, USA</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="knopka_karusel">
+                            <button class="carusel-1" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="carusel-1" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                                </svg>
+                            </button>
+                            <button class="carusel-2" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="carusel-2" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 join">
+                    <div class="text26">Join our team to be a part of our story</div>
+                    <div class="text27">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt.</div>
+                    <button class="knopka7">Join Now</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer class="footer navigation">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <svg width="140" height="29" viewBox="0 0 140 29" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" class="logo">
+                        <path
+                            d="M139.752 21.6557V25.1203H136.846C133.745 25.0228 132.088 23.3481 132.088 20.2026V12.2899H130.059V9.25068H132.088V5.84814H136.376V9.21523H139.655V12.2456H136.376V19.7773C136.376 20.7962 136.58 21.6114 138.148 21.6114L139.752 21.6557Z" />
+                        <path
+                            d="M112.965 17.2166V16.9862C112.919 15.9671 113.074 14.9488 113.422 13.9898C113.77 13.0308 114.303 12.1498 114.992 11.3975C115.681 10.6451 116.512 10.0361 117.437 9.6054C118.362 9.17468 119.362 8.9307 120.382 8.88745C120.585 8.88745 120.798 8.88745 121.002 8.88745C125.051 8.88745 128.604 11.2444 128.604 16.8621V18.0583H117.351C117.466 20.6457 118.866 22.1077 121.223 22.1077C123.252 22.1077 124.2 21.2216 124.475 19.928H128.525C128.028 23.3039 125.335 25.1824 121.073 25.1824C116.394 25.1469 112.965 22.1875 112.965 17.2166ZM124.387 15.3469C124.236 12.99 123.049 11.8558 120.984 11.8558C118.919 11.8558 117.732 13.1318 117.44 15.3469H124.387Z" />
+                        <path
+                            d="M95.4573 17.2166V16.9862C95.4108 15.9685 95.5654 14.9516 95.9122 13.9937C96.259 13.0358 96.7912 12.1557 97.4783 11.4035C98.1654 10.6514 98.994 10.042 99.9168 9.61032C100.839 9.1786 101.838 8.93296 102.856 8.88745C103.06 8.88745 103.272 8.88745 103.476 8.88745C107.526 8.88745 111.088 11.2444 111.088 16.8621V18.0583H99.8433C99.9585 20.6457 101.359 22.1077 103.716 22.1077C105.745 22.1077 106.693 21.2216 106.967 19.928H111.017C110.512 23.3039 107.818 25.1824 103.556 25.1824C98.8864 25.1469 95.4573 22.1875 95.4573 17.2166ZM106.879 15.3469C106.728 12.99 105.541 11.8558 103.476 11.8558C101.412 11.8558 100.26 13.1672 99.932 15.3381L106.879 15.3469Z" />
+                        <path
+                            d="M70.8867 9.21509H75.4234L78.1968 19.7239L81.2361 9.21509H84.7804L87.5272 19.7239L90.4513 9.21509H94.607L89.6804 24.8277H85.4272L82.769 15.0277L79.9247 24.8277H75.6184L70.8867 9.21509Z" />
+                        <path
+                            d="M56.4688 19.9189H60.5181C60.7042 21.3278 61.4042 22.1341 63.265 22.1341C64.9308 22.1341 65.7017 21.505 65.7017 20.4328C65.7017 19.3607 64.8156 18.9088 62.5472 18.5898C58.3915 17.9607 56.7877 16.7645 56.7877 13.7164C56.7877 10.4645 59.765 8.85181 62.9903 8.85181C66.4548 8.85181 69.0688 10.11 69.4409 13.6986H65.4447C65.4192 13.4212 65.339 13.1516 65.2087 12.9053C65.0784 12.6591 64.9006 12.4411 64.6855 12.264C64.4705 12.0868 64.2225 11.9541 63.9559 11.8733C63.6892 11.7926 63.4092 11.7655 63.132 11.7936H62.9991C61.5991 11.7936 60.7839 12.4493 60.7839 13.4062C60.7839 14.3632 61.5371 14.7797 63.8232 15.1075C67.7042 15.6923 69.8751 16.6759 69.8751 20.0164C69.8751 23.3569 67.4206 25.1467 63.3093 25.1467C59.1979 25.1467 56.5839 23.2948 56.4688 19.9189Z" />
+                        <path
+                            d="M39.2617 9.21514H43.5503V11.6873C44.0337 10.7799 44.7674 10.0304 45.6643 9.52772C46.5612 9.02509 47.5835 8.79051 48.6098 8.85185C51.6491 8.85185 53.8554 10.7038 53.8554 14.9303V24.8632H49.6199V15.5506C49.6199 13.4329 48.7959 12.4227 46.882 12.4227C46.4774 12.3875 46.0699 12.4325 45.6829 12.5552C45.2958 12.6779 44.9368 12.8758 44.6264 13.1376C44.316 13.3995 44.0604 13.72 43.8742 14.0809C43.688 14.4417 43.5749 14.8358 43.5415 15.2405C43.5193 15.4288 43.5193 15.6192 43.5415 15.8076V24.8278H39.2617V9.21514Z" />
+                        <path
+                            d="M30.9858 5.28988C30.9703 4.86229 31.0819 4.4397 31.3067 4.07562C31.5315 3.71153 31.8592 3.42233 32.2484 3.24462C32.6377 3.06691 33.0709 3.00868 33.4932 3.07731C33.9155 3.14594 34.308 3.33834 34.6209 3.63016C34.9338 3.92197 35.1531 4.30007 35.2511 4.71659C35.349 5.13311 35.3211 5.56932 35.171 5.96998C35.0208 6.37065 34.7552 6.71776 34.4076 6.96737C34.0601 7.21697 33.6463 7.35785 33.2187 7.37216H33.139C32.8736 7.38896 32.6074 7.35319 32.3559 7.2669C32.1043 7.18062 31.8723 7.04551 31.673 6.86934C31.4738 6.69317 31.3113 6.4794 31.1949 6.24028C31.0785 6.00117 31.0105 5.74143 30.9947 5.47596C30.9873 5.41422 30.9843 5.35204 30.9858 5.28988ZM30.9858 9.2152H35.3187V24.8279H31.0035L30.9858 9.2152Z" />
+                        <path
+                            d="M14.8184 3.49121H28.5171V7.27476H19.6563V12.9191H26.6741V16.5608H19.6475V24.8279H14.8184V3.49121Z" />
+                        <path
+                            d="M6.38861 10.4734C6.38861 11.8114 6.38861 13.4418 4.54557 14.1063C6.43291 14.7532 6.38861 16.1266 6.38861 17.562V22.8785C6.38861 23.8886 6.7962 24.5 7.52279 24.6506C7.68244 24.7045 7.85064 24.7285 8.01899 24.7215H9.79114V28.2658H6.86709C3.7481 28.2658 2.02911 26.4937 2.02911 23.2063V16.9152C2.00699 16.5922 1.86458 16.2893 1.63 16.0662C1.39541 15.8431 1.08571 15.716 0.762025 15.7101H0V12.6H0.762025C1.09216 12.5956 1.40796 12.4644 1.64388 12.2334C1.87981 12.0024 2.01776 11.6895 2.02911 11.3595V4.97975C2.02911 1.74557 3.71266 0 6.86709 0H9.81772V3.49114H8.04557C7.87702 3.49163 7.70958 3.51854 7.54937 3.57089C6.82278 3.75696 6.41519 4.35949 6.41519 5.34304L6.38861 10.4734Z" />
+                    </svg>
+                </a>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Переключатель навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+                    <div class="navbar nav">
+                        <a class="nav-item nav-link" href="#">Home</a>
+                        <a class="nav-item nav-link" href="#">Blog</a>
+                        <a class="nav-item nav-link" href="#">About Us</a>
+                        <a class="nav-item nav-link" href="#">Contact Us</a>
+                        <a class="nav-item nav-link" href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="row g-0">
+            <div class="col-10 block7">
+                <div class="text28">Subscribe to our news letter to get latest updates and news</div>
+                <form class="forma"><input class="text29" type="text" name="email" placeholder="Enter Your Email">
+                </form>
+                <button class="knopka8">Subscribe</button>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-4 text30">
+                <div class="map">Finstreet 118 2561 Fintown</div>
+                <!-- <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7b90761f81898563a5348d916d862b7e30075f599d634edf6e601ccc8adef871&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script> -->
+            </div>
+            <div class="col-8 podval-1">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="kontacts"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="kontacts"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="kontacts"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="kontacts"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                </svg>
+
+            </div>
+            <div class="col-8 podval-2">
+                <a href="mailto:Hello@finsweet.com" class="pochta">Hello@finsweet.com</a>
+                <a href="tel:020 7993 2905" class="phone">020 7993 2905</a>
+            </div>
+        </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

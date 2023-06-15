@@ -1,0 +1,36 @@
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin: 10px;
+
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 500px;
+    /* flex-wrap: wrap-reverse; */
+}
+
+@media(max-width:768px) {
+    .main {
+        flex-direction: column;
+    }
+}
+
+/* 
+.square-1 {
+    flex-grow: 1;
+}
+
+.square-2 {
+    flex-grow: 2;
+}
+
+.square-3 {
+    flex-grow: 3;
+} */

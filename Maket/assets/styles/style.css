@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Sen&display=swap');
+.col_wrapper {}
+
+.navigation {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation_part {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.navigation_part button {
+    margin: 12px 0;
+    height: 56px;
+    width: 179px;
+    font-weight: 700;
+    border: none;
+}
+
+.navigation_part a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 24px;
+}
+
+.nav_wrapper {
+    background-color: #232536;
+    padding: 0 80px;
+    align-items: center;
+}
+
+.navigation_part a:hover {
+    color: #EDC14A;
+    transition-duration: .3s;
+}
+
+.navigation_part button:hover {
+    background-color: #EDC14A;
+    border: none;
+    transition-duration: .3s;
+}
+
+.logo {
+    stroke: #fff;
+    fill: #fff;
+}
+
+.logo:hover {
+    stroke: #EDC14A;
+    fill: #EDC14A;
+}
+
+.posted__on {
+    background-image: url('../images/man-in-black-suit-wearing-eye-glasses-sitting-on-gray-sofa-using-macbook-3772622.jpg');
+    background-size: cover;
+    height: 720px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 80px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: multiply;
+}
+
+.posted__on__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.posted__on__item {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.display {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -2px;
+}
+
+.posted__on__item a {
+    text-decoration: none;
+    color: #EDC14A;
+}
+
+.posted__on__item a:hover {
+    color: #d1a018;
+}
+
+.preview_text {
+    text-transform: uppercase;
+}
+
+.posted__on__item button {
+    background-color: #FFD050;
+    width: 200px;
+    height: 56px;
+    border: none;
+    font-weight: 700;
+}
+
+.posted__on__item button:hover {
+    background-color: #EDC14A;
+}
+
+@media (max-width:576px) {
+    .logo {
+        display: none;
+    }
+}

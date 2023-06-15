@@ -1,0 +1,21 @@
+.square {
+    background-color: green;
+    height: 150px;
+}
+
+.square:last-of-type {
+    background-color: red;
+}
+
+.square:nth-child(1) {
+    background-color: blue;
+}
+
+li{
+    display: none;
+    visibility: hidden;
+}
+
+.squareNone{
+    display: flex;
+}

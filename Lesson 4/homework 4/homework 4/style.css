@@ -1,0 +1,76 @@
+span {
+  color: #8a2be2;
+}
+
+ul {
+  color: #ff7f50;
+  list-style-type: disc;
+}
+
+table {
+  border-radius: 20px;
+  border: #ff7f50 solid;
+  position: relative;
+  left: 140px;
+  padding: 20px 10px;
+  margin: auto;
+  border-spacing: 2px;
+  text-align: center;
+}
+
+thead {
+  background-color: #ff7f50;
+  color: #ffffff;
+}
+
+.courseName {
+  color: #8a2be2;
+}
+
+td {
+  color: #ff7f50;
+  border: #ff7f50 solid;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+td:hover {
+  background-color: darkgrey;
+}
+
+h2 {
+  color: #ffffff;
+  background-color: #ff7f50;
+  padding: 10px 10px;
+
+  position: absolute;
+  top: 0px;
+}
+
+h2:hover {
+  color: #ffffff;
+  background-color: #8a2be2;
+}
+
+body {
+  background-image: url(https://kazan.avenue.school/wp-content/uploads/2019/06/Javascript-Full-Stack-min.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+ol {
+  margin-top: 80px;
+}
+
+a {
+  color: #ff52b1;
+  text-decoration: none;
+  border: #ff52b1 solid;
+  border-radius: 30px;
+  background-color: aqua;
+  padding: 10px;
+}
+
+a:hover {
+  background-color: rgb(19, 116, 180);
+}

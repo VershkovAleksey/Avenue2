@@ -1,0 +1,22 @@
+@keyframes headerTransform {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.header {
+    animation: headerTransform 1s ease-in 2;
+    animation-delay: 3s;
+}
+div{
+    display: flex;
+    justify-content: center;
+}

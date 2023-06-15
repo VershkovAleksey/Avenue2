@@ -1,0 +1,50 @@
+@baseColor: #999;
+@mainWidth: calc(100%-50px);
+
+.mixins() {
+    .nav__item {
+        font-size: 24px;
+        color: orange;
+        background-color: @baseColor;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: lightblue;
+            color: darkorange;
+            text-transform: capitalize;
+        }
+    }
+
+    .nav__item-disabled {
+        display: none;
+        font-size: 24px;
+        color: gray;
+        background-color: @baseColor;
+        text-transform: lowercase;
+
+        &:hover {
+            background-color: lightblue;
+            color: darkorange;
+        }
+    }
+}
+
+
+nav {
+    width: @mainWidth;
+    border: 1px solid black;
+
+    ul {
+
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            .mixins.nav__item;
+        }
+    }
+}
+
+.text {
+    .mixins.nav__item-disabled;
+}

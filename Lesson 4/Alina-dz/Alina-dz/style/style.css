@@ -1,0 +1,35 @@
+ol{
+    color:#4b0082;
+    font-weight: bold;
+}
+
+
+ul li{
+    list-style-type: disc;
+    color: #8b0000;
+    font-weight: normal;
+}
+
+table{
+    width: 70%;
+    height: 300px;
+    border-collapse: collapse;
+    padding: 10px 20px 10px 10px;
+    margin: 50px 160px;
+    text-align: center;
+}
+tr,td{
+    padding: 1px;
+    border: 2px solid black;
+}
+
+.oneline{
+    background-color: #dda0dd;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.text{
+    text-align: left;
+    color: #000080;
+}
